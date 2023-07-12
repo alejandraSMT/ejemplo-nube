@@ -72,6 +72,11 @@ app.get("/consultar-curso",async function(req,res){
     res.send(cursos)
 })
 
+app.get("/",(req,res)=>{
+    console.log("El servidor se encuentra activo: "+port)
+    verificarConexion()
+})
+
 app.listen(port, () => {
     console.log("Servidor funcionando en puerto "+ port);
     verificarConexion();
